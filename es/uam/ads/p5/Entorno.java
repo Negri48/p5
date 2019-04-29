@@ -40,7 +40,6 @@ public class Entorno extends Matrix<List<IBasicAgent>> {
             }
             pantalla +="\n  ";
 
-            /*Decision de diseño de no usar system pq nos imprime \n de mas*/
         }
         return pantalla;
     }
