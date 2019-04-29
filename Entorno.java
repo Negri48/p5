@@ -1,6 +1,8 @@
 package es.uam.ads.p5;
 
-public class Entorno extends Matrix<Cell> {
+import java.util.List;
+
+public class Entorno extends Matrix<List<IBasicAgent>> {
 
     public Entorno(int nRows, int nCols) {
         super(nRows, nCols);
@@ -8,23 +10,25 @@ public class Entorno extends Matrix<Cell> {
 
     public String toString() {
         int row,col;
-
+        String pantalla="  ";
 
         for(row = 0 ; row<this.getRows() ; row++){
             for(col = 0 ; col<this.getCols() ; col++){
                 try {
                     if(this.getElementAt(row,col) == null){
-                        System.out.println("0|  ");
+                        pantalla +="0|  ";
                     }
                     else {
-                        System.out.println(this.getElementAt(row,col).getElement().size()+"|  ");
+                        pantalla +=this.getElementAt(row,col).getElement().size() "| ";
                     }
                 } catch (IllegalPositionException e) {
                     e.printStackTrace();
                 }
             }
-            System.out.println("\n");
+            pantalla +="\n  ";
+
+            /*Decision de diseño de no usar system pq nos imprime \n de mas*/
         }
-        return null;
+        return pantalla;
     }
 }
