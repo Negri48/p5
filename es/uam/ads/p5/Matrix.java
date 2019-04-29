@@ -52,16 +52,16 @@ public class Matrix<T> implements IMatrix<T> {
     }
 
     /**
-     * Comparador de filas
-     * @return el comparador de filas
+     * FALTA
+     * @return
      */
     public Comparator<IMatrixElement<T>> getRowComparator() {
         return rowsComparator;
     }
 
     /**
-     * Comparador de columnas
-     * @return el comparador de columnas
+     * FALTA
+     * @return
      */
     public Comparator<IMatrixElement<T>> getColComparator() {
         return colsComparator;
@@ -70,7 +70,7 @@ public class Matrix<T> implements IMatrix<T> {
     Comparator<IMatrixElement<T>> colsComparator = new Comparator<>() {
 
         /**
-         * Compara que elemento va primero en la lista
+         * FALTA
          * @param o1 elemento de la matriz
          * @param o2 otro elemento de la matriz
          * @return
@@ -87,10 +87,10 @@ public class Matrix<T> implements IMatrix<T> {
     Comparator<IMatrixElement<T>> rowsComparator = new Comparator<>() {
 
         /**
-         * Compara las filas de dos elementos de la matriz
+         * FALTA
          * @param o1 elemento de la matriz
          * @param o2 otro elemento de la matriz
-         * @return el elemento que está el primer
+         * @return
          */
         @Override
         public int compare(IMatrixElement<T> o1, IMatrixElement<T> o2) {
@@ -215,7 +215,7 @@ public class Matrix<T> implements IMatrix<T> {
 
 
     /**
-     *
+     * FALTA
      * @param o
      * @return
      */
@@ -228,7 +228,7 @@ public class Matrix<T> implements IMatrix<T> {
     }
 
     /**
-     *
+     * FALTA
      * @return
      */
     @Override
