@@ -1,6 +1,9 @@
 package es.uam.ads.p5;
 
-import java.util.List;
+/**
+ * Interfaz IMatrixElement
+ * @author David Quintana Ruiz, Victor Sanchez de la Roda Nuñez
+ */
 
 public interface IMatrixElement<T> {
     int getI();

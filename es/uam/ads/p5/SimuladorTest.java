@@ -1,5 +1,9 @@
 package es.uam.ads.p5;
 
+/**
+ * Main para probar el simulador
+ * @author David Quintana Ruiz, Victor Sanchez de la Roda Nuñez
+ */
 public class SimuladorTest {
     public static void main (String[] args){
 

@@ -7,7 +7,10 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-
+/**
+ * Test de los metodos de Matrix
+ * @author David Quintana Ruiz, Victor Sanchez de la Roda Nuñez
+ */
 public class MatrixTest {
 
     IMatrix<String> string;

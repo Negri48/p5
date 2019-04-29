@@ -3,6 +3,10 @@ package es.uam.ads.p5;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Interfaz IMatrix
+ * @author David Quintana Ruiz, Victor Sanchez de la Roda Nuñez
+ */
 public interface IMatrix<T> {
 
     int getCols();
