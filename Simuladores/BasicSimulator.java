@@ -1,4 +1,9 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Simuladores;
+
+import es.uam.ads.p5.Agentes.Cell;
+import es.uam.ads.p5.Agentes.IBasicAgent;
+import es.uam.ads.p5.Matrices.Entorno;
+import es.uam.ads.p5.Matrices.IllegalPositionException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +37,7 @@ public class BasicSimulator {
      * @param numAgentes numero de agentes que contiene
      * @param row filas
      * @param col columnas
+     * @throws IllegalPositionException Posicion no valida
      */
     public void create(IBasicAgent agente, int numAgentes, int row, int col) throws IllegalPositionException {
         List<IBasicAgent> listaAgentes = new ArrayList<>(numAgentes);

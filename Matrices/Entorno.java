@@ -1,4 +1,6 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Matrices;
+
+import es.uam.ads.p5.Agentes.IBasicAgent;
 
 import java.util.List;
 

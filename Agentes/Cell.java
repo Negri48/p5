@@ -1,7 +1,11 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Agentes;
+
+import es.uam.ads.p5.Simuladores.BasicSimulator;
+import es.uam.ads.p5.Matrices.IMatrixElement;
+import es.uam.ads.p5.Matrices.IllegalPositionException;
+import es.uam.ads.p5.Matrices.MatrixElement;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -44,7 +48,7 @@ public class Cell extends MatrixElement<List<IBasicAgent>> {
 
     /**
      * Devuelve los elementos de la lista
-     * @return
+     * @return IBasicAgent
      */
     public List<IBasicAgent> agents(){
         return getElement();

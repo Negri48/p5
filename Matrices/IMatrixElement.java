@@ -1,4 +1,4 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Matrices;
 
 /**
  * Interfaz IMatrixElement

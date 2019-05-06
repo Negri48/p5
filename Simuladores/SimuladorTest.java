@@ -1,4 +1,7 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Simuladores;
+
+import es.uam.ads.p5.Agentes.BasicAgent;
+import es.uam.ads.p5.Matrices.IllegalPositionException;
 
 /**
  * Main para probar el simulador

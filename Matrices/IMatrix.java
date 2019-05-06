@@ -1,4 +1,4 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Matrices;
 
 import java.util.Comparator;
 import java.util.List;

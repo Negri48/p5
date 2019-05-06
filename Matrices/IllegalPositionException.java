@@ -1,4 +1,4 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Matrices;
 
 /**
  * Excepcion que salta si intentamos acceder a una posicion ilegal

@@ -1,4 +1,4 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Matrices;
 //MEJORARRRRRR
 import java.util.*;
 
@@ -47,7 +47,7 @@ public class Matrix<T> implements IMatrix<T> {
 
     /**
      * Comparador por Filas
-     * @return
+     * @return Dicho comparador
      */
     public Comparator<IMatrixElement<T>> getRowComparator() {
         return rowsComparator;
@@ -55,7 +55,7 @@ public class Matrix<T> implements IMatrix<T> {
 
     /**
      * Comparador por Columnas
-     * @return
+     * @return Dicho comparador
      */
     public Comparator<IMatrixElement<T>> getColComparator() {
         return colsComparator;

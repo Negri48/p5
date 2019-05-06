@@ -1,4 +1,8 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Simuladores;
+
+import es.uam.ads.p5.Agentes.Agent;
+import es.uam.ads.p5.Agentes.Cell;
+import es.uam.ads.p5.Matrices.IllegalPositionException;
 
 import java.util.List;
 import java.util.Random;
@@ -6,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class Simulator2Test {
 
-    public static void main(String...args) throws IllegalPositionException{
+    public static void main(String...args) throws IllegalPositionException {
 
         Agent random = new Agent("random");
         Agent outer = new Agent("outer");

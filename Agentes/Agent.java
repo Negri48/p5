@@ -1,4 +1,7 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Agentes;
+
+import es.uam.ads.p5.Matrices.IMatrixElement;
+import es.uam.ads.p5.Matrices.IllegalPositionException;
 
 import java.util.ArrayList;
 import java.util.List;

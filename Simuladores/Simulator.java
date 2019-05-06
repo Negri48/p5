@@ -1,10 +1,11 @@
-package es.uam.ads.p5;
+package es.uam.ads.p5.Simuladores;
+
+import es.uam.ads.p5.Agentes.Agent;
+import es.uam.ads.p5.Agentes.BasicAgent;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
-import java.util.stream.Collectors;
 
 
 /**
