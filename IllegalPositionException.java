@@ -6,4 +6,8 @@ package es.uam.ads.p5;
  */
 
 public class IllegalPositionException extends Exception {
+    @Override
+    public String toString() {
+        return "IllegalPositionException: La nueva posicion no es valida";
+    }
 }

@@ -10,14 +10,10 @@ import java.util.List;
 
 public class BasicSimulator {
 
-    /**
-     * Entorno del BasicAgent
-     */
+    // Entorno del simulador
     private Entorno entorno;
 
-    /**
-     * Tiempo de simulacion
-     */
+    // Tiempo de simulacion
     int time = 0;
 
     /**
@@ -37,29 +33,47 @@ public class BasicSimulator {
      * @param row filas
      * @param col columnas
      */
-    public void create(IBasicAgent agente, int numAgentes, int row, int col){
-        List<IBasicAgent> listaAgentes = new ArrayList<>();
+    public void create(IBasicAgent agente, int numAgentes, int row, int col) throws IllegalPositionException {
+        List<IBasicAgent> listaAgentes = new ArrayList<>(numAgentes);
         int i;
-        for(i = 0; i < numAgentes ; i++) {
+        for (i = 0; i < numAgentes; i++) {
             listaAgentes.add(agente.copy());
         }
         Cell celda = new Cell(row,col,listaAgentes,this);
-        try {
-            entorno.addElement(celda);
-        } catch (IllegalPositionException e) {
-            e.printStackTrace();
+        if (entorno.getElementAt(row,col) != null) {
+            ((Cell) (entorno.getElementAt(row,col))).addAgents(listaAgentes);
         }
+        else {
+            entorno.addElement(celda);
+        }
+
+        actualizar(listaAgentes);
     }
 
+    /**
+     * Funcion que actualiza la lista de agentes
+     * @param listaAgentes Nueva lista
+     */
+    private void actualizar(List<IBasicAgent> listaAgentes) {
+        //Esta vacia porque en la simulacion basica no es necesaria
+    }
+
+    /**
+     * Getter del entorno
+     * @return Entorno
+     */
+    public Entorno getEntorno() {
+        return entorno;
+    }
 
     /**
      * Ejecuta el simulador
      * @param pasos numero de pasos que se realizan
      */
-    public void run(int pasos){
+    public void run(int pasos) {
         int i;
 
-        for(i = 0; i < pasos ; i++) {
+        for (i = 0; i < pasos; i++) {
             System.out.println("++++++++++++++++++++++++++++++++++++++++++");
             System.out.println("Time = "+time);
             System.out.println(entorno);

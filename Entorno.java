@@ -25,14 +25,14 @@ public class Entorno extends Matrix<List<IBasicAgent>> {
         int row,col;
         String pantalla="  ";
 
-        for(row = 0 ; row < this.getRows() ; row++) {
-            for(col = 0 ; col < this.getCols() ; col++) {
+        for (row = 0 ; row < this.getRows() ; row++) {
+            for (col = 0 ; col < this.getCols() ; col++) {
                 try {
-                    if(this.getElementAt(row,col) == null) {
-                        pantalla +="0|  ";
+                    if (this.getElementAt(row,col) == null) {
+                        pantalla +="· |  ";
                     }
                     else {
-                        pantalla +=this.getElementAt(row,col).getElement().size() "| ";
+                        pantalla +=String.format("%3s",this.getElementAt(row,col).getElement().size() +"|  ");
                     }
                 } catch (IllegalPositionException e) {
                     e.printStackTrace();
@@ -43,4 +43,7 @@ public class Entorno extends Matrix<List<IBasicAgent>> {
         }
         return pantalla;
     }
+
+
+
 }

@@ -8,14 +8,10 @@ package es.uam.ads.p5;
 
 public class BasicAgent implements IBasicAgent {
 
-    /**
-     * Celda
-     */
-    private Cell celda;
+    // Celda donde esta el agente
+    protected Cell celda;
 
-    /**
-     * Nombre de la celda
-     */
+    // Nombre del tipo de agente
     private String nombre;
 
     /**
@@ -44,5 +40,13 @@ public class BasicAgent implements IBasicAgent {
         BasicAgent copia = new BasicAgent(nombre);
         copia.celda = this.celda;
         return copia;
+    }
+
+    /**
+     * Getter del nombre
+     * @return String que indica el nombre
+     */
+    public String getNombre() {
+        return nombre;
     }
 }

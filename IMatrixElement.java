@@ -8,7 +8,7 @@ package es.uam.ads.p5;
 public interface IMatrixElement<T> {
     int getI();
     int getJ();
-    Object getElement();
+    T getElement();
     void setElement(T element);
     String toString();
     boolean equals(Object obj);

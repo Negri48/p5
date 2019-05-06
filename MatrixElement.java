@@ -6,19 +6,13 @@ package es.uam.ads.p5;
  */
 public class MatrixElement<T> implements IMatrixElement<T> {
 
-    /**
-     * Numero de fila
-     */
+    // Numero de fila
     private int i;
 
-    /**
-     * Numero de columna
-     */
+    // Numero de columna
     private int j;
 
-    /**
-     * Elemento
-     */
+    // Elemento de tipo T
     private T element;
 
 
@@ -55,7 +49,7 @@ public class MatrixElement<T> implements IMatrixElement<T> {
      * Devuelve el elemento
      * @return elemento de la matriz
      */
-    public Object getElement() {
+    public T getElement() {
         return element;
     }
 

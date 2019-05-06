@@ -9,19 +9,13 @@ import java.util.*;
 
 public class Matrix<T> implements IMatrix<T> {
 
-    /**
-     * Matriz que contiene a los elementos
-     */
+    // Matriz que contiene los elementos de tipo T
     Map<Integer, Map<Integer, IMatrixElement<T>>> matriz = new HashMap<>();
 
-    /**
-     * Numero de columnas
-     */
+    // Numero de columnas
     private int nCols;
 
-    /**
-     * Numero de columnas
-     */
+    // Numero de filas
     private int nRows;
 
 
@@ -52,7 +46,7 @@ public class Matrix<T> implements IMatrix<T> {
     }
 
     /**
-     * FALTA
+     * Comparador por Filas
      * @return
      */
     public Comparator<IMatrixElement<T>> getRowComparator() {
@@ -60,20 +54,22 @@ public class Matrix<T> implements IMatrix<T> {
     }
 
     /**
-     * FALTA
+     * Comparador por Columnas
      * @return
      */
     public Comparator<IMatrixElement<T>> getColComparator() {
         return colsComparator;
     }
 
+
+
     Comparator<IMatrixElement<T>> colsComparator = new Comparator<>() {
 
         /**
-         * FALTA
+         * Metodo compare para el comparador por Columnas
          * @param o1 elemento de la matriz
          * @param o2 otro elemento de la matriz
-         * @return
+         * @return Condicion de comparacion
          */
         @Override
         public int compare(IMatrixElement<T> o1, IMatrixElement<T> o2) {
@@ -87,14 +83,14 @@ public class Matrix<T> implements IMatrix<T> {
     Comparator<IMatrixElement<T>> rowsComparator = new Comparator<>() {
 
         /**
-         * FALTA
+         * Metodo compare para el comparador por Columnas
          * @param o1 elemento de la matriz
          * @param o2 otro elemento de la matriz
          * @return
          */
         @Override
         public int compare(IMatrixElement<T> o1, IMatrixElement<T> o2) {
-            if(o1.getI() == o2.getI()){
+            if (o1.getI() == o2.getI()){
                 return (o1.getJ()-o2.getJ());
             }
             return  (o1.getI() - o2.getI());
@@ -176,7 +172,7 @@ public class Matrix<T> implements IMatrix<T> {
      * @return lista que contiene a los vecinos
      * @throws IllegalPositionException excepcion que salta si la posicion es ilegal
      */
-    public List<IMatrixElement<T>> getNeighboursAt ( int i, int j) throws IllegalPositionException {
+    public List<IMatrixElement<T>> getNeighboursAt(int i, int j) throws IllegalPositionException {
         if (isLegalPosition(i, j) == false) {
             throw new IllegalPositionException();
         } else {
@@ -188,7 +184,7 @@ public class Matrix<T> implements IMatrix<T> {
      * Devuelve todos los elementos no nulos de la matriz en una lista
      * @return lista con los elementos
      */
-    public List<IMatrixElement<T>> asList () {
+    public List<IMatrixElement<T>> asList() {
         List<IMatrixElement<T>> lista = new ArrayList<>();
 
         for (Integer i : matriz.keySet()) {
@@ -215,27 +211,30 @@ public class Matrix<T> implements IMatrix<T> {
 
 
     /**
-     * FALTA
-     * @param o
-     * @return
+     * Metodo equals
+     * @param o Objeto que queremos comparar
+     * @return True si es igual, false si no
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if ( (o == null) || (getClass() != o.getClass()) ){
+            return false;
+        }
         Matrix<?> matrix = (Matrix<?>) o;
-        return nCols == matrix.nCols && nRows == matrix.nRows && matriz.equals(matrix.matriz);
+        return (nCols == matrix.nCols) && (nRows == matrix.nRows) && (matriz.equals(matrix.matriz));
     }
 
     /**
-     * FALTA
-     * @return
+     * Metodo hashCode
+     * @return Entero
      */
     @Override
     public int hashCode() {
         return Objects.hash(matriz, nCols, nRows);
     }
-
 
 
 }
